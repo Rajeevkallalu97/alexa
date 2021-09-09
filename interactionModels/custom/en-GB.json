@@ -1,0 +1,160 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "covid flash",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "getCountryCasesIntent",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "covid updates in {country}",
+            "covid cases in {country}",
+            "latest covid cases in {country}"
+          ]
+        },
+        {
+          "name": "precautionsIntent",
+          "slots": [],
+          "samples": [
+            "how to stay safe covid guide",
+            "covid precautions",
+            "precautions"
+          ]
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "doctorAppointmentIntent",
+          "slots": [],
+          "samples": []
+        },
+        {
+          "name": "dietIntent",
+          "slots": [],
+          "samples": [
+            "immune rich foods",
+            "covid diet",
+            "what to eat"
+          ]
+        },
+        {
+          "name": "getTravelInfoIntent",
+          "slots": [
+            {
+              "name": "from",
+              "type": "AMAZON.GB_CITY"
+            },
+            {
+              "name": "to",
+              "type": "AMAZON.GB_CITY"
+            }
+          ],
+          "samples": [
+            "travel {from} to {to}",
+            "can i travel from {from} to {to}"
+          ]
+        },
+        {
+          "name": "getLockDownInfoIntent",
+          "slots": [
+            {
+              "name": "level",
+              "type": "AMAZON.GB_CITY"
+            }
+          ],
+          "samples": [
+            "details of {level}",
+            "what are {level} restrictions",
+            " {level} restrictions",
+            "{level} details"
+          ]
+        },
+        {
+          "name": "getOverviewCaseIntent",
+          "slots": [],
+          "samples": [
+            "covid cases in uk",
+            "cases update in britain",
+            "cases update in UK",
+            "cases update in United Kingdom",
+            "coivd cases overview in United Kingdom",
+            "coivd cases overview in britian",
+            "coivd cases overview in UK"
+          ]
+        },
+        {
+          "name": "getCityRestrictionInfoIntent",
+          "slots": [
+            {
+              "name": "city",
+              "type": "AMAZON.GB_CITY"
+            }
+          ],
+          "samples": [
+            "restrictions in {city}",
+            "lockdown in {city}",
+            "What are lockdown rules in {city}"
+          ]
+        },
+        {
+          "name": "getOverviewVaccineIntent",
+          "slots": [],
+          "samples": [
+            "vaccination in UK",
+            "vaccination in United Kingdom",
+            "vaccine info in United Kingdom",
+            "vaccine update in UK",
+            "Vaccine info in UK"
+          ]
+        },
+        {
+          "name": "getCountryVaccineIntent",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "vaccine info in {country}",
+            "total vaccine info in {country}",
+            "vaccine updates in {country}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "36"
+}
