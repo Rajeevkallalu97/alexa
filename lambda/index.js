@@ -1,8 +1,3 @@
-/* *
- * This sample demonstrates handling intents from an Alexa skill using the Alexa Skills Kit SDK (v2).
- * Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
- * session persistence, api calls, and more.
- * */
 const Alexa = require('ask-sdk-core');
 const axios = require("axios");
 const data = require('./data.js');
@@ -128,6 +123,7 @@ const getTravelInfoIntentHandler = {
       for (i = 0; i < travel["level3"].length; i++) {
         if (travel["level3"][i] === from) {
           let distance = travel["level3"][travel["level3"].length - 1];
+          to_flag += 1;
           if (from === "glasgow") {
             let travel_distance = travel[from][to];
             if (distance - travel_distance >= 0) {
@@ -140,20 +136,24 @@ const getTravelInfoIntentHandler = {
           }
         }
       }
-      if (from_flag === 0 && to_flag === 0) {
-        speakOutput = `You can travel from ${from} to ${to} as there are no restrictions , but it is recommended to wear Face covering in public transport and mass gathering`;
-      }
+     
       for (i = 0; i < travel["level2"].length; i++) {
         if (travel["level2"][i] === from) {
           let distance = travel["level2"][travel["level2"].length - 1];
           speakOutput = `The travel distance restriction in level2 is ${distance} miles, travel only if you have a reasonable excuse`;
+          to_flag += 1;
         }
       }
       for (i = 0; i < travel["level1"].length; i++) {
         if (travel["level1"][i] === from) {
           let distance = travel["level1"][travel["level1"].length - 1];
           speakOutput = `The travel distance restriction in level1 is ${distance} miles, travel only if you have a reasonable excuse`;
+          to_flag += 1;
         }
+      }
+      
+       if (from_flag === 0 && to_flag === 0) {
+        speakOutput = `You can travel from ${from} to ${to} as there are no restrictions , but it is recommended to wear Face covering in public transport and mass gathering`;
       }
     }
     // speakOutput = `${from}${to}`
@@ -361,10 +361,9 @@ const dietIntentHandler = {
     handle(handlerInput) {
         
         const speakOutput = data.Diet;
-        const info = 'For more info please visit www.emro.who.int/nutrition'
 
         return handlerInput.responseBuilder
-            .speak(speakOutput+' '+info)
+            .speak(speakOutput)
             .reprompt('Would you like to know anything more')
             .getResponse();
     }

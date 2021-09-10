@@ -55,6 +55,6 @@ module.exports = {
     ],
     "level1": ["dundee","75"],
     "level2": ["stirling","inverness","70"],
-    "level3": [ "aberdeen","60"],
+    "level3": [ "aberdeen","glasgow","60"],
     "glasgow": {"inverness": "168.2", "stirling" : "26.6", "aberdeen": "145.4", "dundee": "80.5"}
 };
