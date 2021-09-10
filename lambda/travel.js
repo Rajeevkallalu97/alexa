@@ -1,8 +1,9 @@
 module.exports = {
     "welcome": "Welcome, you can ask about city lockdown status, travel restrictions, covid cases, vaccine info, lockdown levels and more about COVID-19",
     "repromptText": "Try again, what do you like to know?",
+    "no_restrictions":["liverpool","manchester","london","edinburgh","cardiff"],
     "national_i": ["armagh", "belfast", "londonderry", "lisburn", "newry"],
-    "national_w": ["bangor", "cardiff", "newport", "st davids", "swansea"],
+    "national_w": ["bangor", "newport", "st davids", "swansea"],
     "national_e": [
       "bath",
       "birmingham",
@@ -27,8 +28,6 @@ module.exports = {
       "leicester",
       "lichfield",
       "lincoln",
-      "city of london",
-      "manchester",
       "newcastle upon tyne",
       "norwich",
       "nottingham",
@@ -54,8 +53,8 @@ module.exports = {
       "worcester",
       "york",
     ],
-    "level1": ["dundee","80"],
+    "level1": ["dundee","75"],
     "level2": ["stirling","inverness","70"],
-    "level3": [ "aberdeen","edinburgh", "liverpool","60"],
-    "liverpool": {"inverness": "167.8", "stirling" : "26.2", "aberdeen": "144.9", "dundee": "80.5", "edinburgh": "46.5"}
+    "level3": [ "aberdeen","60"],
+    "glasgow": {"inverness": "168.2", "stirling" : "26.6", "aberdeen": "145.4", "dundee": "80.5"}
 };

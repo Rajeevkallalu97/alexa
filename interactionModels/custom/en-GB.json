@@ -47,19 +47,6 @@
           ]
         },
         {
-          "name": "AMAZON.NoIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.YesIntent",
-          "samples": []
-        },
-        {
-          "name": "doctorAppointmentIntent",
-          "slots": [],
-          "samples": []
-        },
-        {
           "name": "dietIntent",
           "slots": [],
           "samples": [
@@ -104,7 +91,6 @@
           "name": "getOverviewCaseIntent",
           "slots": [],
           "samples": [
-            "covid cases in uk",
             "cases update in britain",
             "cases update in UK",
             "cases update in United Kingdom",
@@ -133,9 +119,7 @@
           "samples": [
             "vaccination in UK",
             "vaccination in United Kingdom",
-            "vaccine info in United Kingdom",
-            "vaccine update in UK",
-            "Vaccine info in UK"
+            "vaccine update in UK"
           ]
         },
         {
@@ -151,10 +135,331 @@
             "total vaccine info in {country}",
             "vaccine updates in {country}"
           ]
+        },
+        {
+          "name": "registerDoctorIntent",
+          "slots": [
+            {
+              "name": "month",
+              "type": "MonthType",
+              "samples": [
+                "appointment is on {month}",
+                "{month}"
+              ]
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "appointment is on {day}",
+                "{day}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "{year}",
+                "appointment is on {year}"
+              ]
+            }
+          ],
+          "samples": [
+            "doctor appointment is on {month}",
+            "doctor appointment is on {month} {day} {year}",
+            "remember my doctor appointment"
+          ]
+        },
+        {
+          "name": "sayDoctorAppointment",
+          "slots": [],
+          "samples": [
+            "next doctor appointment",
+            "doctor appointment",
+            "When is my doctor appointment"
+          ]
+        },
+        {
+          "name": "registerVaccineIntent",
+          "slots": [
+            {
+              "name": "month",
+              "type": "MonthType",
+              "samples": [
+                "appointment is on {month}",
+                "{month}"
+              ]
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{day}",
+                "appointment is on {day}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "{year}",
+                "appointment is on {year}"
+              ]
+            }
+          ],
+          "samples": [
+            "remember my vaccine appointment",
+            "vaccine appointment is on {month} {day} {year}",
+            "vaccine appointment is on {month}"
+          ]
+        },
+        {
+          "name": "sayVaccineAppointment",
+          "slots": [],
+          "samples": [
+            "When is my vaccine appointment",
+            "vaccine appointment",
+            "next vaccine appointment"
+          ]
+        },
+        {
+          "name": "treatHighTemperature",
+          "slots": [],
+          "samples": [
+            "precautions for high temperature",
+            "high temperature",
+            "How to treat high temperature"
+          ]
+        },
+        {
+          "name": "treatCough",
+          "slots": [],
+          "samples": [
+            "precautions for cough",
+            "cough",
+            "How to treat cough"
+          ]
         }
       ],
-      "types": []
-    }
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "december"
+              }
+            },
+            {
+              "name": {
+                "value": "november"
+              }
+            },
+            {
+              "name": {
+                "value": "october"
+              }
+            },
+            {
+              "name": {
+                "value": "september"
+              }
+            },
+            {
+              "name": {
+                "value": "august"
+              }
+            },
+            {
+              "name": {
+                "value": "july"
+              }
+            },
+            {
+              "name": {
+                "value": "june"
+              }
+            },
+            {
+              "name": {
+                "value": "may"
+              }
+            },
+            {
+              "name": {
+                "value": "april"
+              }
+            },
+            {
+              "name": {
+                "value": "march"
+              }
+            },
+            {
+              "name": {
+                "value": "february"
+              }
+            },
+            {
+              "name": {
+                "value": "january"
+              }
+            }
+          ],
+          "name": "MonthType"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "registerDoctorIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.377570857637"
+          },
+          "slots": [
+            {
+              "name": "month",
+              "type": "MonthType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.377570857637.1331921285418"
+              }
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.377570857637.1056386421277"
+              }
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.377570857637.1101725318295"
+              }
+            }
+          ]
+        },
+        {
+          "name": "registerVaccineIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1219948917214"
+          },
+          "slots": [
+            {
+              "name": "month",
+              "type": "MonthType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1219948917214.1102431780855"
+              }
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1219948917214.925736582230"
+              }
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1219948917214.104931485415"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.377570857637.1331921285418",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which month is your appointment?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.377570857637.1056386421277",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "On what day is appointment?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.377570857637.1101725318295",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ok. {month} {day} , but in which year?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.377570857637",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{month} {day} {year} , did i get it right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1219948917214.925736582230",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "On what day is appointment?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1219948917214.104931485415",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ok. {month} {day} , but in which year?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1219948917214",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{month} {day} {year} , did i get it right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1219948917214.1102431780855",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which month is your appointment?"
+          }
+        ]
+      }
+    ]
   },
-  "version": "36"
+  "version": "53"
 }

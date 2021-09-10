@@ -8,5 +8,4 @@ module.exports = {
     "tier3" : {"code" : "tier 3","1": "Household mixing", "2" : "Large gatherings / raves" , "3" : " Business closures"},
     "tier4" : {"code" : "tier 4","1" : "Leaving home", "2" : "Social gatherings ban", "3" : "Large gatherings / raves" , "4" : " Business opening hours", "5" : "Alcohol sales"},
     "national" : {"code" : "national","1" : "Leaving home", "2" : "Social gatherings ban", "3" : " Business closures" , "4" : " UK travel"}
-
 };
